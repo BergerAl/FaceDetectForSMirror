@@ -1,0 +1,43 @@
+{"user": [
+  {"Alex" : [
+    {"App1": [
+      {"config": [
+        {"position" : 28.2},
+        {"high" : 22.3},
+        {"width" : 11.2}
+        ]}
+      ]},
+    {"App2": false}
+    ]},
+  {"Domse" : [
+    {"App1": [
+      {"config": [
+        {"position" : 28.2},
+        {"high" : 22.3},
+        {"width" : 11.2}
+        ]}
+      ]},
+    {"App2": false}
+    ]},
+  {"Marian" : [
+    {"App1": [
+      {"config": [
+        {"position" : 28.2},
+        {"high" : 22.3},
+        {"width" : 11.2}
+        ]}
+      ]},
+    {"App2": false}
+    ]},
+  {"Patrick" : [
+    {"App1": [
+      {"config": [
+        {"position" : 28.2},
+        {"high" : 22.3},
+        {"width" : 11.2}
+        ]}
+      ]},
+    {"App2": true}
+    ]}
+]
+}
