@@ -75,13 +75,14 @@ class addingNewPerson():
 
     def __init__(self):
         #ISSUE: read path fo Configuration.json
-        self.jsonConfigPath = "C:/Users/Aleks/Desktop/FaceDetectForSMirror/FaceDetectForSMirror/user/Configutation.json"
-        self.pictureAmount = 100
+        self.jsonConfigPath = "user/Configutation.json"
+        self.pictureAmount = 250
+        self.validationAmount = 1/5
 
     def gettingPersonsName(self):
         self.personsName = input("Enter Persons Name: ")
         #Unsolved issue: double Names?
-        pictureDir = "CameraPics/ModelTraining/" + personsName
+        pictureDir = "CameraPics/ModelTraining/" + self.personsName
         if not os.path.exists(pictureDir):
             os.makedirs(pictureDir)
 
@@ -100,5 +101,16 @@ class addingNewPerson():
 
     def takePictiresForModelTraining(self):
         for i in range(0,self.pictureAmount-1):
-            image_name = "CameraPics/ModelTraining/" + personsName +"/" + i + '.jpg'
+            print("Taking picture number %d for training" % (i))
+            image_name = "CameraPics/ModelTraining/" + self.personsName +"/" + i + '.jpg'
             camera.capture(image_name)
+            time.sleep(3)
+        for i in range(0,(self.pictureAmount*self.validationAmount-1)):
+            print("Taking picture number %d for validation" % (i))
+            image_name = "CameraPics/ModelValidation/" + self.personsName +"/" + i + '.jpg'
+            camera.capture(image_name)
+            time.sleep(3)
+        print("Done taking pictures!")
+
+NP = addingNewPerson()
+NP.addConfigDetails()
